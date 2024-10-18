@@ -45,4 +45,12 @@ def menu_item_draw_func(self, context):
     
 bpy.types.VIEW3D_MT_object_context_menu.append(menu_item_draw_func)
 
+# Register banana button
+def register():
+    bpy.utils.register_class(TEST_OT_material_init)
     
+def unregister():
+    bpy.utils.unregister_class(TEST_OT_material_init)
+
+if __name__ == "__main__":
+    register()
