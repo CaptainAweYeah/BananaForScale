@@ -22,7 +22,7 @@ class TEST_OT_material_init(bpy.types.Operator):
         cwd = os.getcwd()
         N = len(cwd)
         ver = cwd[N - 3 :]
-        bD = '/scripts/Banana For Scale/Banana.blend'
+        bD = '/scripts/addons/Banana For Scale/Banana.blend'
         banana_path = cwd + '/' + ver + bD
 
         # Link the external Banana
