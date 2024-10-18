@@ -20,8 +20,10 @@ class TEST_OT_material_init(bpy.types.Operator):
     def execute(self, context):
         # Find banana
         cwd = os.getcwd()
-        bD = '/4.0/scripts/addons/Banana For Scale/Banana.blend'
-        banana_path = cwd + bD
+        N = len(cwd)
+        ver = cwd[N - 3 :]
+        bD = '/scripts/Banana For Scale/Banana.blend'
+        banana_path = cwd + '/' + ver + bD
 
         # Link the external Banana
         with bpy.data.libraries.load(banana_path, link=True) as (data_from, data_to):
